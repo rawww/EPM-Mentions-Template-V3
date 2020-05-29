@@ -1,0 +1,424 @@
+<!doctype html>
+<html class="no-js height100" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Mobile Meta -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>EPM Mentions</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="https://use.typekit.net/obs4tew.css">
+  <link rel="stylesheet" href="font/css/kiko-all.min.css">
+  <!--owl carousel https://owlcarousel2.github.io -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <!--graph.js https://www.chartjs.org/ -->
+  <script src="js/vendor/Chart.bundle.min.js"></script>
+</head>
+
+<body class="height100 fullbg bgdashboard">
+  <!-- wrapper starts -->
+
+  <div class="grid-x">
+    <div class="large-12 cell">
+
+      <!-- desktop nav bar starts -->
+
+      <div class="grid-x block-header show-for-large" role="banner">
+
+        <div class="cell small-5 large-4 branding">
+          <img alt="epm Mentions" src="img/logo.svg" />
+        </div>
+
+        <div class="cell small-7 large-8 navigation show-for-large">
+
+          <!--desktop hamburger menu-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="page-nav"><i class='kikos kiko-hamburger-menu'></i></button>
+
+          <!--profile-->
+          <button class="button float-right profile" type="button"><img class="nav-profile" src="img/profile-avatar.jpg" /></button>
+
+          <!--language selector-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="language">En <i class='kikos kiko-triangular-arrow-down'></i></button>
+
+          <!--add to dashboard-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="add-to-dashboard"><i class="kikos kiko-circle-plus"></i> Add to dashboard</button>
+
+
+
+        </div>
+
+      </div>
+
+      <!-- desktop nav bar ends -->
+
+
+      <!-- mobile nav bar starts -->
+
+      <div class="grid-x block-header mobile hide-for-large" role="banner">
+
+        <div class="cell small-3">
+          <a href="#" class="white" data-toggle="page-nav"><i class='kikos kiko-hamburger-menu lt click-me'></i></a>
+        </div>
+
+        <div class="cell small-6 ct">
+          <h3>Page Title</h3>
+        </div>
+
+        <div class="cell small-3 rt">
+          <a href="#" class="white" data-toggle="add-to-dashboard"><i class='kikos kiko-circle-plus click-me'></i></a>
+        </div>
+
+      </div>
+
+      <!-- mobile nav bar ends -->
+
+      <!-- main nav dropdown starts-->
+
+
+      <div class="dropdown-pane dropdown-pane--nav bottom notrounded   page-nav" id="page-nav" data-options="data-close-on-click" data-dropdown data-auto-focus="true">
+        <h4 class="pb">Navigate</h4><i data-toggle="page-nav" class='kikor kiko-cross-line click-me pa close'></i>
+        <div class="grid-x">
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- main nav dropdown ends-->
+
+      <!-- add to dashboard drop down menu content starts -->
+      <div class="dropdown-pane dropdown-pane--addtodash bottom notrounded  " data-options="data-close-on-click" data-position="bottom" data-alignment="left" id="add-to-dashboard" data-dropdown data-auto-focus="true">
+        <h4 class="pb">Add to dashboard</h4><i data-toggle="add-to-dashboard" class='kikor kiko-cross-line click-me pa close'></i>
+
+        <!-- owl slides -->
+        <div class="owl-carousel">
+          <div class="item click-me" style="width:420px;">
+            <div class="overlay"></div><img src="img/addmenu/overview-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-inactive.png" />
+            <p class="inactive">Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/total-feedback-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/total-feedback-logs-inactive.png" />
+            <p class="inactive">Label</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- add to dashboard drop down menu content ends -->
+
+      <!-- language drop down menu starts -->
+      <div class= "dropdown-pane bottom notrounded" data-options="data-close-on-click" data-position="bottom" data-alignment="left" id="language" data-dropdown data-auto-focus="true">
+        <h4>Languages</h4><i data-toggle="language" class='kikor kiko-cross-line click-me pa close'></i>
+        <div class="grid-x">
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- language drop down menu ends -->
+
+      <!-- dashboard -->
+
+      <div class="grid-x block-dashboard align-center contentwrapper">
+        <div class="wrapper cell small-12">
+          <div class="grid-x grid-padding-x grid-padding-y grid-margin-x grid-margin-y">
+            <div class="cell dash-cell dash-cell--profile small-12 medium-6 large-4 bgwhite box-shadow">
+              <img class="dashboardprofile circle" src="img/profile-avatar-large.jpg" />
+              <h4>Hey Adam, welcome to your mentions dashboard</h4>
+              <hr>
+              <h5>Adam Moseley</h5>
+              <p><a href="mailto:adammoseley@epmorris.co.uk">adammoseley@epmorris.co.uk</a></p>
+              <a class="button bgsecondary db">Edit Profile</a>
+            </div>
+
+            <div class="cell dash-cell small-12 medium-6 large-8 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h4>Overview</h4>
+              <div class="grid-x grid-padding-y">
+                <div class="cell small-12 large-2">
+                  Statistics for April 2019
+                </div>
+                <div class="cell small-12 large-6">
+                  <canvas id="pieChart" width="100%" height="80"></canvas>
+                  <script>
+                    new Chart(document.getElementById("pieChart"), {
+                      type: 'pie',
+                      data: {
+                        labels: ["Total Feedback Logs 1", "Total Feedback Logs 2", "Total Feedback Logs 3"],
+                        datasets: [{
+                          label: "Feedback Logs",
+                          backgroundColor: ["#1B1433", "#491F8B", "#8AC44A"],
+                          data: [2478, 5267, 734]
+                        }]
+                      },
+                      options: {
+                        title: {
+                          display: false,
+                          text: 'Lorem ipsum'
+                        },
+                        legend: {
+                          display: false
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+                <div class="cell small-12 large-4">
+                  <select>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                  </select>
+                  <div class="closeable-select">
+                    <select class="selectborder--primary closeable">
+                      <option>total feedback logs</option>
+                    </select>
+                  </div>
+                  <div class="closeable-select">
+                    <select class="selectborder--primary-bright closeable">
+                      <option>total feedback logs</option>
+                    </select>
+                  </div>
+                  <div class="closeable-select">
+                    <select class="selectborder--secondary closeable">
+                      <option>total feedback logs</option>
+                    </select>
+                  </div>
+                  <i class='kikos kiko-circle-plus click-me'></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="cell dash-cell dash-cell--numberstat small-12 medium-6 large-4 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h1 class="value primary">174</h1>
+              <h4>Total feedback Logs</h4>
+              <hr class="primary" />
+              <div class="link bottom click-me">View all logs <i class="kikol kiko-triangular-arrow-right secondary"></i></a></div>
+            </div>
+
+            <div class="cell dash-cell dash-cell--numberstat small-12 medium-6 large-4 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h1 class="value secondary">94</h1>
+              <h4>Feedback logs submitted</h4>
+              <hr class="secondary" />
+              <div class="link bottom click-me">View all logs <i class="kikol kiko-triangular-arrow-right secondary"></i></a></div>
+            </div>
+
+            <div class="cell dash-cell dash-cell--numberstat small-12 medium-6 large-4 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h1 class="value primary">174</h1>
+              <h4>Total feedback Logs</h4>
+              <hr class="primary" />
+              <div class="link bottom click-me">View all logs <i class="kikol kiko-triangular-arrow-right secondary"></i></a></div>
+            </div>
+
+            <div class="cell dash-cell dash-cell--logs small-12 medium-6 large-4 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h4>Logs</h4>
+              <table class="stacked unstriped">
+                <thead>
+                  <tr>
+                    <th width="100">Priority <i class='kikol kiko-triangular-arrow-down secondary'></th>
+                    <th>Summary <i class='kikol kiko-triangular-arrow-down secondary'></th>
+                    <th width="120">Date Logged <i class='kikol kiko-triangular-arrow-down secondary'></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img class="priority" src="img/icons/priority.png" /></td>
+                    <td class="secondary"><a href="#">The bus failed to stop…</a></td>
+                    <td>01/04/19 - 15:28:50</td>
+                  </tr>
+                  <tr>
+                    <td><img class="priority" src="img/icons/priority.png" /></td>
+                    <td class="secondary"><a href="#">The bus failed to stop…</a></td>
+                    <td>01/04/19 - 15:28:50</td>
+                  </tr>
+                  <tr>
+                    <td><img class="priority" src="img/icons/priority.png" /></td>
+                    <td class="secondary"><a href="#">The bus failed to stop…</a></td>
+                    <td>01/04/19 - 15:28:50</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="link bottom click-me">View top priority logs <i class="kikol kiko-triangular-arrow-right secondary"></i></a></div>
+            </div>
+
+            <div class="cell dash-cell dash-cell--logs small-12 medium-6 large-4 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h4>Logs</h4>
+              <div class="link bottom click-me">View top priority logs <i class="kikol kiko-triangular-arrow-right secondary"></i></a></div>
+            </div>
+
+            <div class="cell dash-cell dash-cell--logs small-12 medium-6 large-4 bgwhite box-shadow">
+              <img alt="move" class="move" src="img/icons/move.png">
+              <img alt="close" class="close" src="img/icons/close.png">
+              <h4>Tags</h4>
+              <div class="grid-x grid-padding-x grid-padding-y">
+                <div class="cell small-4 ct">
+                  <span class="tag">test tag</span>
+                </div>
+                <div class="cell small-4 ct">
+                  <span class="tag">test tag</span>
+                </div>
+                <div class="cell small-4 ct">
+                  <span class="tag">test tag</span>
+                </div>
+                <div class="cell small-4 ct">
+                  <span class="tag">lorem ipsum</span>
+                </div>
+                <div class="cell small-4 ct">
+                  <span class="tag">sanct amet</span>
+                </div>
+                <div class="cell small-4 ct">
+                  <span class="tag">ipsum</span>
+                </div>
+              </div>
+              <div class="link bottom click-me">View all tags <i class="kikol kiko-triangular-arrow-right secondary"></i></a></div>
+            </div>
+            <div class="cell dash-cell empty small-12 medium-6 large-4">
+
+            </div>
+            <div class="cell dash-cell empty small-12 medium-6 large-4">
+
+            </div>
+            <div class="cell dash-cell empty small-12 medium-6 large-4">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- dashboard ends -->
+
+
+
+    </div>
+  </div>
+
+  <!-- wrapper ends -->
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/headroom.min.js"></script>
+  <!--owl carousel -->
+  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

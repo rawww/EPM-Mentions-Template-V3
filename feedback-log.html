@@ -1,0 +1,714 @@
+<!doctype html>
+<html class="no-js height100" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Mobile Meta -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>EPM Mentions</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="http://use.typekit.net/obs4tew.css">
+  <link rel="stylesheet" href="font/css/kiko-all.min.css">
+  <!--owl carousel https://owlcarousel2.github.io -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <!--graph.js https://www.chartjs.org/ -->
+  <script src="js/vendor/Chart.bundle.min.js"></script>
+  <!--jquery ui -->
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body class="height100 fullbg">
+  <!-- wrapper starts -->
+
+  <div class="grid-x">
+    <div class="large-12 cell">
+
+      <!-- desktop nav bar starts -->
+
+      <div class="grid-x block-header show-for-large" role="banner">
+
+        <div class="cell small-5 large-4 branding">
+          <img alt="epm Mentions" src="img/logo.svg" />
+        </div>
+
+        <div class="cell small-7 large-8 navigation show-for-large">
+
+          <!--desktop hamburger menu-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="page-nav"><i class='kikos kiko-hamburger-menu'></i></button>
+
+          <!--settings-->
+          <button class="button float-right profile" type="button"><img class="nav-settings" src="img/icons/ico-cog.png" /></button>
+
+          <!--fav-->
+          <button class="button float-right profile" type="button"><img class="nav-favourite" src="img/icons/ico-star.png" /></button>
+
+          <!--profile-->
+          <button class="button float-right profile" type="button"><img class="nav-profile" src="img/profile-avatar.jpg" /></button>
+
+          <!--language selector-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="language">En <i class='kikos kiko-triangular-arrow-down'></i></button>
+
+          <!--add to dashboard-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="add-to-dashboard"><i class="kikos kiko-circle-plus"></i> Add to dashboard</button>
+
+
+
+        </div>
+
+      </div>
+
+      <!-- desktop nav bar ends -->
+
+
+      <!-- mobile nav bar starts -->
+
+      <div class="grid-x block-header mobile hide-for-large" role="banner">
+
+        <div class="cell small-3">
+          <a href="#" class="white" data-toggle="page-nav"><i class='kikos kiko-hamburger-menu lt click-me'></i></a>
+        </div>
+
+        <div class="cell small-6 ct">
+          <h3>Page Title</h3>
+        </div>
+
+        <div class="cell small-3 rt">
+          <a href="#" class="white" data-toggle="add-to-dashboard"><i class='kikos kiko-circle-plus click-me'></i></a>
+        </div>
+
+      </div>
+
+      <!-- mobile nav bar ends -->
+
+      <!-- main nav dropdown starts-->
+
+      <div class="dropdown-pane dropdown-pane--nav navigation bottom notrounded page-nav" id="page-nav" data-options="data-close-on-click" data-dropdown data-auto-focus="true">
+        <div class="grid-x grid-padding-x grid-padding-y">
+          <div class="cell cell-nav small-4 ct click-me">
+            <!--fav-->
+            <button class="button" type="button"><img class="nav-favourite" src="img/icons/ico-star.png" /></button>
+          </div>
+          <div class="cell cell-nav small-4 ct click-me">
+            <!--settings-->
+            <button class="button" type="button"><img class="nav-settings" src="img/icons/ico-cog.png" /></button>
+         </div>
+          <div class="cell cell-nav small-4 ct click-me">
+            <!--profile-->
+            <button class="button" type="button"><img class="nav-profile" src="img/profile-avatar.jpg" /></button>
+          </div>
+        </div>
+        <div class="grid-x  grid-padding-x grid-padding-y">
+          <div class="cell cell-nav-items small-12">
+            <i data-toggle="page-nav" class='kikor kiko-cross-line click-me pa close'></i>
+            <ul>
+              <li><a href="#">Incidents</a></li>
+              <li><a href="#">Vehicle Incident Basic Entry</a></li>
+              <li><a href="#">Mentions</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+      <!-- main nav dropdown ends-->
+
+      <!-- add to dashboard drop down menu content starts -->
+      <div class="dropdown-pane dropdown-pane--addtodash bottom notrounded" data-options="data-close-on-click" data-position="bottom" data-alignment="left" id="add-to-dashboard" data-dropdown data-auto-focus="true">
+        <h4 class="pb">Add to dashboard</h4><i data-toggle="add-to-dashboard" class='kikor kiko-cross-line click-me pa close'></i>
+
+        <!-- owl slides -->
+        <div class="owl-carousel">
+          <div class="item click-me" style="width:420px;">
+            <div class="overlay"></div><img src="img/addmenu/overview-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-inactive.png" />
+            <p class="inactive">Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/total-feedback-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/total-feedback-logs-inactive.png" />
+            <p class="inactive">Label</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- add to dashboard drop down menu content ends -->
+
+      <!-- language drop down menu starts -->
+      <div class="dropdown-pane bottom notrounded" data-options="data-close-on-click" data-position="bottom" data-alignment="left" id="language" data-dropdown data-auto-focus="true">
+        <h4>Languages</h4><i data-toggle="language" class='kikor kiko-cross-line click-me pa close'></i>
+        <div class="grid-x">
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- language drop down menu ends -->
+
+      <!-- edit screen starts -->
+
+      <div class="grid-x block-edit contentwrapper">
+
+        <a href="#" class="close-tab open close-sidebar hide-for-large"><i class="kikol kiko-triangular-arrow-right secondary"></i></a>
+
+        <!-- sidebar -->
+        <div class="cell small-2 sidebar">
+
+          <a href="#" class="close-tab close close-sidebar hide-for-large"><i class="kikol kiko-triangular-arrow-left secondary"></i></a>
+
+          <div class="grid-x grid-padding-x">
+            <div class="small-12 large-4 cell align-self-middle">
+              <img class="profileimage border4px circle box-shadow" src="img/profile-avatar-large.jpg" />
+            </div>
+            <div class="small-12 large-8 cell align-self-middle">
+              <h6 class="ct-largedown mb0">John Doe</h6>
+              <small class="ct-largedown show-for-medium primary">john@epmorris.co.uk</small>
+            </div>
+          </div>
+          <ul>
+            <li class="cancel clearwrap"><a href="#"><i class='kikol kiko-triangular-arrow-left secondary'></i> Cancel</a><span class="clear secondary click-me">Clear all</span></li>
+            <li><a href="#"><span><img src="img/icons/basic.svg"></span> Basic</a></li>
+            <li><a href="#"><span><img src="img/icons/groups.svg"></span> Groups</a></li>
+            <li><a href="#"><span><img src="img/icons/access.svg"></span> Access</a></li>
+            <li><a href="#"><span><img src="img/icons/company.svg"></span> Company</a></li>
+            <li><a href="#"><span><img src="img/icons/dashboard.svg"></span> Dashboard</a></li>
+            <li class="clearwrap"><a href="#"><span><img src="img/icons/ticked.svg"></span> Feedback Log (active)</a><span class="clear secondary click-me">Clear all</span></li>
+            <li><a href="#"><span><img src="img/icons/ticked.svg"></span> Feedback Log (active)</a></li>
+            <li><a href="#"><span><img src="img/icons/ticked.svg"></span> Feedback Log (active)</a></li>
+            <li><a href="#"><span><img src="img/icons/ticked-inactive.svg"></span> Feedback Log (in active)</a></li>
+            <li><a href="#"><span><img src="img/icons/ticked-inactive.svg"></span> Feedback Log (in active)</a></li>
+            <li><a href="#"><span><img src="img/icons/ticked-inactive.svg"></span> Feedback Log (in active)</a></li>
+
+          </ul>
+          <a href="#" class="button db bgsecondary">Button</a>
+          <a href="#" class="button db bgprimary">Button</a>
+        </div>
+        <!-- main -->
+        <div class="cell small-10 main">
+          <h4 class="mb">Screen Header</h4>
+          <div class="wrapper box-shadow">
+            <div class="grid-x">
+              <div class="cell small-order-2 large-order-1 small-12 large-8">
+                <h3 class="secondary">Header</h3>
+                <label>Text</label>
+                <input type="text" placeholder="placeholder" />
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+                <label>Text area</label>
+                <textarea></textarea>
+                <label>Checkbox <input type="checkbox" /></label>
+                <a href="#" class="button bgprimary">Button bgprimary</a><br />
+                <a href="#" class="button bgsecondary">Button bgsecondary</a><br />
+                <a href="#" class="button bgtransprimary">Button bgtransprimary</a><br />
+                <a href="#" class="button bgtranssecondary">Button bgtranssecondary</a>
+
+              </div>
+              <div class="cell small-order-1 large-order-2 small-12 large-4">
+                <div class="wrap-editprofile pr show-for-medium">
+                  <img class="editprofile border4px circle box-shadow click-me" src="img/profile-avatar-large.jpg" />
+                  <img class="edit-icon click-me" src="img/icons/edit.png" />
+                </div>
+              </div>
+            </div>
+            <div class="grid-x">
+              <div class="cell small-12">
+
+                <hr>
+
+                <h3 class="secondary">Header with clear selection <p class="clear secondary">Clear <span class="show-for-large">section</span></p>
+                </h3>
+                <label>Text</label>
+                <input type="text" placeholder="Enter title" />
+
+                <div class="grid-x">
+                  <div class="cell small-12 medium-6 pr10medium">
+                    <label>Text field in 2 col</label>
+                    <input type="text" placeholder="placeholder" />
+                  </div>
+                  <div class="cell small-12 medium-6">
+                    <label>Text field in 2 col</label>
+                    <input type="text" placeholder="placeholder" />
+                  </div>
+                </div>
+
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+                <label>Text area</label>
+                <textarea></textarea>
+                <label>Date Picker</label>
+                <script>
+                  jQuery( function() {
+                    jQuery( "#datepicker" ).datepicker();
+                  } );
+                </script>
+                <input type="text" id="datepicker">
+                <label>Tags</label>
+                <span class="add tag click-me"><i class='kikos kiko-circle-plus'></i> new tag</span> <span class="tag">test tag</span> <span class="tag">test tag</span>
+                <label>File upload</label>
+
+                <label for="file-upload" class="custom-file-upload show-for-large">
+                  <a class="button notrounded bgsecondary m0">Browse...</a> <span class="file-name">Upload document</span>
+                </label>
+                <input class="system-file-upload hide-for-large" id="file-upload" name='upload_cont_img' type="file">
+
+                <hr>
+                <h4 class="mb secondary">Searchable / sortable table with x scroll</h4>
+                <h5 class="mb secondary">Table name</h5>
+                <div class="grid-x grid-padding-y">
+                  <div class="small-12 medium-5"><input id="search-table" type="text" placeholder="Search"></div>
+                  <div class="small-12 medium-7 rt"><a href="#" class="button bgsecondary">Add new feedback</a></div>
+                  <div class="small-12">
+                    <table id="sortabletable" class="display unstriped" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>Header 1</th>
+                          <th>Header 2</th>
+                          <th>Header 3</th>
+                          <th>Header 4</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                        </tr>
+                        <tr>
+                          <td>Garrett Winters</td>
+                          <td>Accountant</td>
+                          <td>Tokyo</td>
+                          <td>63</td>
+
+                        </tr>
+                        <tr>
+                          <td>Ashton Cox</td>
+                          <td>Junior Technical Author</td>
+                          <td>San Francisco</td>
+                          <td>66</td>
+
+                        </tr>
+                        <tr>
+                          <td>Cedric Kelly</td>
+                          <td>Senior Javascript Developer</td>
+                          <td>Edinburgh</td>
+                          <td>22</td>
+
+                        </tr>
+                        <tr>
+                          <td>Airi Satou</td>
+                          <td>Accountant</td>
+                          <td>Tokyo</td>
+                          <td>33</td>
+
+                        </tr>
+                        <tr>
+                          <td>Brielle Williamson</td>
+                          <td>Integration Specialist</td>
+                          <td>New York</td>
+                          <td>61</td>
+
+                        </tr>
+                        <tr>
+                          <td>Herrod Chandler</td>
+                          <td>Sales Assistant</td>
+                          <td>San Francisco</td>
+                          <td>59</td>
+
+                        </tr>
+                        <tr>
+                          <td>Rhona Davidson</td>
+                          <td>Integration Specialist</td>
+                          <td>Tokyo</td>
+                          <td>55</td>
+
+                        </tr>
+                        <tr>
+                          <td>Colleen Hurst</td>
+                          <td>Javascript Developer</td>
+                          <td>San Francisco</td>
+                          <td>39</td>
+
+                        </tr>
+                        <tr>
+                          <td>Sonya Frost</td>
+                          <td>Software Engineer</td>
+                          <td>Edinburgh</td>
+                          <td>23</td>
+
+                        </tr>
+                        <tr>
+                          <td>Jena Gaines</td>
+                          <td>Office Manager</td>
+                          <td>London</td>
+                          <td>30</td>
+
+                        </tr>
+                        <tr>
+                          <td>Quinn Flynn</td>
+                          <td>Support Lead</td>
+                          <td>Edinburgh</td>
+                          <td>22</td>
+
+                        </tr>
+                        <tr>
+                          <td>Charde Marshall</td>
+                          <td>Regional Director</td>
+                          <td>San Francisco</td>
+                          <td>36</td>
+
+                        </tr>
+                        <tr>
+                          <td>Haley Kennedy</td>
+                          <td>Senior Marketing Designer</td>
+                          <td>London</td>
+                          <td>43</td>
+
+                        </tr>
+                        <tr>
+                          <td>Tatyana Fitzpatrick</td>
+                          <td>Regional Director</td>
+                          <td>London</td>
+                          <td>19</td>
+
+                        </tr>
+                        <tr>
+                          <td>Michael Silva</td>
+                          <td>Marketing Designer</td>
+                          <td>London</td>
+                          <td>66</td>
+
+                        </tr>
+                        <tr>
+                          <td>Paul Byrd</td>
+                          <td>Chief Financial Officer (CFO)</td>
+                          <td>New York</td>
+                          <td>64</td>
+
+                        </tr>
+                        <tr>
+                          <td>Gloria Little</td>
+                          <td>Systems Administrator</td>
+                          <td>New York</td>
+                          <td>59</td>
+
+                        </tr>
+                        <tr>
+                          <td>Bradley Greer</td>
+                          <td>Software Engineer</td>
+                          <td>London</td>
+                          <td>41</td>
+
+                        </tr>
+                        <tr>
+                          <td>Dai Rios</td>
+                          <td>Personnel Lead</td>
+                          <td>Edinburgh</td>
+                          <td>35</td>
+
+                        </tr>
+                        <tr>
+                          <td>Jenette Caldwell</td>
+                          <td>Development Lead</td>
+                          <td>New York</td>
+                          <td>30</td>
+
+                        </tr>
+                        <tr>
+                          <td>Yuri Berry</td>
+                          <td>Chief Marketing Officer (CMO)</td>
+                          <td>New York</td>
+                          <td>40</td>
+
+                        </tr>
+                        <tr>
+                          <td>Caesar Vance</td>
+                          <td>Pre-Sales Support</td>
+                          <td>New York</td>
+                          <td>21</td>
+
+                        </tr>
+
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Header 1</th>
+                          <th>Header 2</th>
+                          <th>Header 3</th>
+                          <th>Header 4</th>
+
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+
+                </hr>
+                <h4 class="mb secondary">Sortable</h4>
+                <script>
+                  jQuery(function() {
+                jQuery("#sortable1, #sortable2").sortable({
+                  connectWith: ".connectedSortable"
+                }).disableSelection();
+              });
+            </script>
+                <div class="grid-x sortable">
+                  <div class="cell small-5">
+                    <h6 class="bordertb">Available Groups</h6>
+                    <ul id="sortable1" class="connectedSortable">
+                      <li class="click-me">Item 1</li>
+                      <li class="click-me">Item 2</li>
+                      <li class="click-me">Item 3</li>
+                      <li class="click-me">Item 4</li>
+                      <li class="click-me">Item 5</li>
+                    </ul>
+                  </div>
+                  <div class="cell small-2 align-self-middle align-center mt30">
+                    <img class="sort-icon" src="img/icons/swap.svg" />
+                  </div>
+                  <div class="cell small-5">
+                    <h6 class="bordertb">Allocated Groups</h6>
+                    <ul id="sortable2" class="connectedSortable">
+                      <li class="click-me">Item 1</li>
+                      <li class="click-me">Item 2</li>
+                      <li class="click-me">Item 3</li>
+                      <li class="click-me">Item 4</li>
+                      <li class="click-me">Item 5</li>
+                    </ul>
+                  </div>
+                </div>
+                <hr>
+                <h4 class="mb secondary">Access</h4>
+                <select>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+                </select>
+                <table class="unstriped edit-table">
+                  <thead>
+                    <tr>
+                      <th width="280">
+                        <h5 class="mb0">Access Header</h5>
+                      </th>
+                      <th width="80" class="ct">Not Defined</th>
+                      <th width="80" class="ct">Deny</th>
+                      <th width="80" class="ct">Read Only</th>
+                      <th width="80" class="ct">Read Write</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                    </tr>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                    </tr>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                      <td class="ct"><input type="checkbox" /></td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th width="280">
+                        <h5 class="mb0">Access Header</h5>
+                      </th>
+                      <th width="80" class="ct"></th>
+                      <th width="80" class="ct">Deny</th>
+                      <th width="80" class="ct">Read Only</th>
+                      <th width="80" class="ct">Read Write</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                    </tr>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                    </tr>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr>
+                <h4 class="mb secondary">Company</h4>
+                <table class="unstriped edit-table">
+                  <thead>
+                    <tr>
+                      <th width="280">
+                        <h5 class="mb0">Access Header</h5>
+                      </th>
+                      <th width="80" class="ct">Not Defined</th>
+                      <th width="80" class="ct">Deny</th>
+                      <th width="80" class="ct">Read Only</th>
+                      <th width="80" class="ct">Read Write</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                    </tr>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                    </tr>
+                    <tr>
+                      <td>Access label</td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                      <td class="ct"><input class="access-check" type="checkbox" /></td>
+                    </tr>
+                  </tbody>
+
+                </table>
+
+                <hr>
+                <h4 class="mb secondary">Dashboard selection</h4>
+                <div class="grid-x edit-dash-selection">
+                  <div class="small-12 medium-8 cell"><label><img class="click-me" src="img/addmenu/overview-active.png" /><span>Label <input class="dash-check" type="checkbox" /></span></label></div>
+                  <div class="small-12 medium-4 cell inactive"><label><img class="click-me" src="img/addmenu/priority-logs-inactive.png" /><span>Label <input class="dash-check" type="checkbox" disabled /></span></label></div>
+                  <div class="small-12 medium-4 cell"><label><img class="click-me" src="img/addmenu/total-feedback-logs-active.png" /><span>Label <input class="dash-check" type="checkbox" /></span></label></div>
+                  <div class="small-12 medium-4 cell inactive"><label><img class="click-me" src="img/addmenu/total-feedback-logs-inactive.png" /><span>Label <input class="dash-check" type="checkbox" disabled /></span></label></div>
+                  <div class="small-12 medium-4 cell"><label><img class="click-me" src="img/addmenu/total-feedback-logs-active.png" /><span>Label <input class="dash-check" type="checkbox" /></span></label></div>
+
+                </div>
+              </div>
+            </div>
+            <!-- /main -->
+
+          </div>
+
+          <!-- edit screen ends -->
+
+
+
+        </div>
+      </div>
+
+      <!-- wrapper ends -->
+
+
+
+      <script src="js/vendor/what-input.js"></script>
+      <script src="js/vendor/foundation.js"></script>
+      <script src="js/vendor/headroom.min.js"></script>
+      <!--owl carousel -->
+      <script src="js/vendor/owl.carousel.min.js"></script>
+      <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      <script src="http://cdn.datatables.net/1.10.19/js/dataTables.foundation.min.js"></script>
+      <script src="js/app.js"></script>
+</body>
+
+</html>

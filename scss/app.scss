@@ -1,0 +1,1670 @@
+/*! Last updated: 27/06/19
+
+ ____    ______  __      __  __      __  __      __
+/\  _`\ /\  _  \/\ \  __/\ \/\ \  __/\ \/\ \  __/\ \
+\ \ \L\ \ \ \L\ \ \ \/\ \ \ \ \ \/\ \ \ \ \ \/\ \ \ \
+ \ \ ,  /\ \  __ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+  \ \ \\ \\ \ \/\ \ \ \_/ \_\ \ \ \_/ \_\ \ \ \_/ \_\ \
+   \ \_\ \_\ \_\ \_\ `\___x___/\ `\___x___/\ `\___x___/
+    \/_/\/ /\/_/\/_/'\/__//__/  '\/__//__/  '\/__//__/
+
+
+Project: EPM software
+Author: Rawww
+Author URI: http://rawww.com/
+Version: 0.1
+Date: 24/05/19
+Responsive framework: Foundation 6.51
+Compiled with: Prepros 6.3 https://prepros.io/downloads
+*/
+
+/* ==========================================================================
+   color sass variables
+==========================================================================*/
+$primary: #1B1433; // the purple
+$primary_light:#F2F5F8; // the purple - light
+$primary_bright:#491F8B;
+$secondary: #8AC44A; // the green
+$secondary_light: #E6EFDC;
+$grey: #6F6F6F;
+$grey-light: #D3D6D8;
+$white: #fff;
+
+/* ==========================================================================
+   resets
+========================================================================== */
+//focus borders off
+
+* {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   media query reference
+   ========================================================================== */
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
+/* ==========================================================================
+   helper classes
+   ========================================================================== */
+$helperpadding: 20px;
+$helpermargin: 20px;
+
+.center-img {
+  margin: 0 auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+
+.di {
+  display: inline;
+}
+
+.db {
+  display: block;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.oa {
+  overflow: auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mauto {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.ct {
+  text-align: center !important;
+}
+
+.full-width {
+  width:100%;
+}
+
+.ct-largedown {
+  @media screen and (max-width: 64em) {
+    text-align: center !important;
+    display:block;
+  }
+}
+
+.lt {
+  text-align: left !important;
+}
+
+.rt {
+  text-align: right !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.m0 {
+  margin:0;
+}
+
+.mt {
+  margin-top: $helpermargin;
+}
+
+.mt100 {
+  margin-top: 100px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mb {
+  margin-bottom: $helpermargin;
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.pt {
+  padding-top: $helperpadding;
+}
+
+.pb {
+  padding-bottom: $helperpadding;
+}
+
+.pb0 {
+  padding-bottom: 0 !important;
+}
+
+.pt0 {
+  padding-top: 0 !important;
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+
+.pl0 {
+  padding-left: 0 !important;
+}
+
+.pr20 {
+  padding-right: 20px !important;
+}
+
+.pl20 {
+  padding-left: 20px !important;
+}
+
+.pd {
+  padding: $helperpadding !important;
+}
+
+.pr10medium {
+  @media screen and (min-width: 42em) {
+   padding-right:10px !important;
+  }
+}
+
+.npdb {
+  padding-bottom: 0;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.fullwidth {
+  width:100%;
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.display-table {
+  display: table;
+}
+
+.display-cell {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
+.zindex9999 {
+  z-index: 9999;
+}
+
+.primary {
+  color: $primary;
+}
+
+.primary_bright {
+  color:$primary_bright;
+}
+
+.bgprimary {
+  background:$primary;
+}
+
+.secondary {
+  color: $secondary;
+}
+
+.bgsecondary {
+  background: $secondary;
+}
+
+.bgwhite {
+  background: $white;
+}
+
+.white {
+  color: $white !important;
+}
+
+.dont-highlight-fields {
+  padding:30px 20px;
+  background:#fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.highlight-fields {
+  padding:30px 20px;
+  background:#F2F5F8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+hr {
+  max-width:100% !important;
+}
+
+.block-edit {
+  hr {
+    border:0;
+    padding: 40px 0;
+
+    &:after {
+      content:"";
+      display:block;
+      height:1px;
+      background-color:#ccc;
+      width:100%;
+      position:absolute;
+      left:0;
+    }
+  }
+}
+
+hr.primary {
+  border:0;
+  height:3px;
+  width:100px;
+  margin-left:0;
+  display:block;
+  background:$primary;
+}
+hr.primarybright {
+  border:0;
+  height:3px;
+  width:100px;
+  margin-left:0;
+  display:block;
+  background:$primary_bright;
+}
+hr.secondary {
+  border:0;
+  height:3px;
+  width:100px;
+  margin-left:0;
+  display:block;
+  background:$secondary;
+}
+
+.img-transition {
+  transition: all .25s;
+  -moz-transition: all .25s;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
+}
+
+.click-me {
+  &:hover {
+    cursor:pointer;
+    cursor:hand;
+  }
+}
+
+.rounded {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.notrounded {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.box-shadow {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.12);
+}
+
+.circle {
+  border-radius:50%;
+}
+
+.border4px {
+  border: 4px solid $white;
+}
+
+.bordertb {
+  border-top: 1px solid $grey-light;
+  border-bottom: 1px solid $grey-light;
+  padding:10px 0;
+}
+
+
+/* ==========================================================================
+   css animation, interaction states
+  ==========================================================================*/
+
+  * {
+  -o-transition:all .25s ease-out, all .25s ease-in;
+  -ms-transition:all .25s ease-out, all .25s ease-in;
+  -moz-transition:all .25s ease-out, all .25s ease-in;
+  -webkit-transition:all .25s ease-out, all .25s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:all .25s ease-out, all .25s ease-in;
+}
+
+table th {
+  -o-transition:none;
+  -ms-transition:none;
+  -moz-transition:none;
+  -webkit-transition:none;
+  /* ...and now override with proper CSS property */
+  transition:none;
+}
+
+.contentwrapper {
+
+a:hover {
+  color:$primary !important;
+}
+
+.clear:hover {
+  color:$primary !important;
+}
+
+a.button:hover {
+  color:$white !important;
+}
+
+a.bgtransprimary:hover {
+  color:$primary !important;
+}
+
+a.bgtranssecondary:hover {
+  color:$secondary !important;
+}
+
+.link.bottom:hover {
+  i {
+   margin-left:5px;
+  }
+}
+
+}
+
+/* ==========================================================================
+   fixes
+   ========================================================================== */
+
+.kikol, .kikos {
+ vertical-align:middle;
+}
+
+.owl-nav.disabled{
+  display: block !important;
+}
+
+/* ==========================================================================
+  top level selectors
+  ========================================================================== */
+
+  i {
+    font-style: normal;
+  }
+
+   body, h1, h2, h3, h4, h5, h6 {
+     font-family: museo-sans-rounded,sans-serif !important;
+     font-weight: 500;
+     font-style: normal;
+  }
+
+  label {
+    font-weight:bold;
+  }
+
+/* ==========================================================================
+  backgrounds
+  ========================================================================== */
+
+  .height100 {
+    height:100%;
+  }
+
+  .fullbg {
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+
+  .bglogin {
+    background-image:url(../img/bg1.jpg);
+  }
+
+  .bgdashboard {
+    background:$primary_light;
+  }
+
+/* ==========================================================================
+   notifications
+   ========================================================================== */
+
+    .warning {
+      background:#E9E9EB !important;
+    }
+
+    .tooltip {
+      background:$primary;
+    }
+
+    .tooltip-trigger {
+      visibility:hidden;
+      @media screen and (min-width: 1400px) {
+        visibility:visible;
+        display:inline-block;
+      }
+      width:auto;
+      border:0;
+      float:right;
+    }
+
+    .tooltip-bubble {
+
+      width: 20px !important;
+      height: 20px;
+      border: 0;
+      background: $secondary;
+      border-radius: 50%;
+      color: #fff;
+    }
+
+/* ==========================================================================
+   buttons
+   ========================================================================== */
+
+  .button {
+    padding: 0.95em 0.5em;
+    @media screen and (min-width: 40em) {
+      padding: 0.95em 1.4em;
+    }
+    @media screen and (min-width: 64em) {
+      padding: 0.95em 2.4em;
+    }
+  }
+
+  .button.bgprimary {
+    &:hover {
+      background:darken($primary,10%);
+    }
+  }
+
+  .button.bgsecondary {
+    &:hover {
+      background:darken($secondary,10%);
+    }
+  }
+
+  .button.bgtransprimary {
+    background:transparent;
+    color:$primary !important;
+    border-color:$primary !important;
+    &:hover {
+      background:transparent;
+      color:darken($primary,20%);
+      border-color:darken($primary,20%);
+    }
+  }
+
+  .button.bgtranssecondary {
+    background:transparent;
+    color:$secondary !important;
+    border-color:$secondary !important;
+    &:hover {
+      background:transparent;
+      color:darken($secondary,20%);
+      border-color:darken($secondary,20%);
+    }
+  }
+
+
+/* ==========================================================================
+   navigation
+   ========================================================================== */
+
+
+
+.block-header {
+  background:$primary;
+
+  .branding {
+    padding:10px 20px;
+  }
+
+
+
+}
+
+.navigation .button {
+  border-left:1px solid #3B3552;
+  padding: 1.6em 1em;
+  margin-bottom:0;
+  height: 100%;
+}
+
+.navigation {
+  .nav-settings, .nav-favourite {
+    max-width:28px;
+  }
+ }
+
+.navigation .button.profile {
+  padding: 0.61em 1em;
+}
+
+.nav-profile {
+  max-width:42px;
+  border-radius:50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.dropdown-pane {
+  padding:0 0 40px 0;
+  border:0;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  height:100%;
+  top:72px !important;
+  @media screen and (min-width: 40em) {
+    top:61px !important;
+  }
+  //shadow
+  -webkit-box-shadow: inset 0px -6px 23px -13px rgba(0,0,0,0.08);
+  -moz-box-shadow: inset 0px -6px 23px -13px rgba(0,0,0,0.08);
+  box-shadow: inset 0px -6px 23px -13px rgba(0,0,0,0.08);
+
+  ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+  li {
+    font-size:1.0rem;
+  }
+
+  a:hover {
+    color:$secondary;
+  }
+
+  .close {
+    top:10px;
+    right:21.5px;
+    @media screen and (min-width: 64em) {
+      top:10px;
+      right:18px;
+    }
+  }
+
+  .item {
+    position:relative;
+    &:hover {
+      .overlay {
+        border:2px solid $secondary;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:86.5%;
+        background:url(../img/addmenu/add-cross.png) center center rgba(138, 196, 74, 0.15) no-repeat;
+        background-size:25px;
+
+        -o-transition:  none;
+        -ms-transition:  none;
+        -moz-transition:  none;
+        -webkit-transition:  none;
+        transition: none;
+      }
+    }
+    //labels
+    p {
+      padding:10px 0 0 10px;
+    }
+
+    p.inactive {
+      color:$grey-light;
+    }
+  }
+
+
+
+  //carousel navigation
+  .owl-prev {
+    position: absolute;
+    left: 0;
+    background: url(../img/addmenu/left.png) no-repeat center center !important;
+    background-size: cover !important;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-indent: -4984px;
+    bottom:0;
+    @media screen and (min-width: 40em) {
+      left: -28px;
+      top: 90px;
+    }
+  }
+  .owl-next {
+    position: absolute;
+    right: 0;
+    background: url(../img/addmenu/right.png) no-repeat center center !important;
+    background-size: cover !important;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-indent: -4984px;
+    bottom:0;
+    @media screen and (min-width: 40em) {
+      top: 90px;
+      right: -28px;
+    }
+  }
+ }
+
+
+ .dropdown-pane--nav {
+   background:#49188D !important;
+   li, a {
+     color:#fff;
+   }
+   button {
+    background:#49188D !important;
+    border:0 !important;
+    padding:10px 0 !important;
+   }
+  .cell-nav {
+    border-right:1px solid #643A9E;
+    border-bottom:1px solid #643A9E;
+  }
+
+  .close {
+    top: 112px;
+    right: 32.5px;
+    color: #fff;
+    font-size: 21px;
+  }
+
+  .cell-nav-items {
+    padding:80px 20px;
+
+    a {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      display: block;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+ }
+
+
+.active-white.hover  {
+    background:$white;
+    color:$primary;
+    i {
+      color:$primary;
+    }
+}
+
+// full reveal navigation
+
+.page-nav {
+  top: 70px;
+  @media screen and (min-width: 40em) {
+    top: 60px;
+  }
+  width:100%;
+  background-color: $white;
+  .close {
+    width:14px;
+  }
+
+}
+
+.dropdown-pane--addtodash {
+  @media screen and (min-width: 40em) {
+    padding:20px 42px;
+  }
+
+}
+
+.block-header.mobile {
+  padding:1.3em 0;
+  color:$white;
+  h3 {
+    font-size:1.1875rem;
+    margin:0;
+  }
+  i {
+    padding: 1.5em 1em;
+    font-size:1.2rem;
+  }
+}
+
+/* ==========================================================================
+   edit screens
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  .clear {
+    font-size:0.9rem;
+    float:right;
+    margin:0;
+    padding-top:5px;
+    &:hover {
+      cursor:pointer;
+      cursor:hand;
+      color:$primary;
+    }
+  }
+}
+
+
+
+.block-edit {
+
+.dataTables_wrapper tr.odd, .dataTables_wrapper tr.even {
+  border-bottom:1px solid $primary_light !important;
+  &:hover {
+    background:$primary_light;
+  }
+}
+
+  .close-tab.open {
+    display:none;
+    left: 0px;
+    top: 82px;
+  }
+
+  .close-tab {
+    position: absolute;
+    background: url(../img/tab-bg.png) no-repeat center center;
+    background-size: cover;
+    top: 15px;
+    right: -38px;
+    width: 38px;
+    height: 38px;
+    padding: 7px 10px 7px 11px;
+  }
+
+
+  .sidebar {
+    background:$white;
+    position:relative;
+
+    label {
+      font-size:0.8rem;
+      font-weight:bold;
+      padding:0 10px;
+      @media screen and (min-width: 980px) {
+        padding:0 30px;
+      }
+    }
+
+    .profileimage {
+      width:100%;
+      max-width:80px;
+      margin:12px auto;
+      display:block;
+
+      @media screen and (max-width: 39.9375em) {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        border:0;
+      }
+    }
+
+    //users name
+    h6 {
+      font-size:12px;
+      @media screen and (min-width: 42em) {
+        font-size:14px;
+      }
+    }
+
+    li {
+      position:relative;
+      border-bottom:1px solid $primary_light;
+      &:hover {
+        background:#F9FBFC;
+      }
+      .clear {
+        font-size: 0.8rem;
+        padding:10px 0;
+        @media screen and (min-width: 980px) {
+          padding:0;
+          position: absolute;
+          width: 60px;
+          top: 23px;
+          right: 20px;
+        }
+      }
+    }
+
+    ul {
+      list-style:none;
+      margin:0 0 30px 0;
+    }
+
+    .clearwrap {
+      @media screen and (min-width: 64em) {
+        padding-right:75px;
+      }
+    }
+
+    .cancel:hover {
+      @media screen and (min-width: 42em) {
+        i {
+          margin-right:-5px;
+        }
+      }
+    }
+
+    //font icons
+
+    .kikol {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 10px;
+    }
+
+    //svg icons
+
+    li span {
+      width: 48px;
+      text-align: center;
+      display: block;
+      margin:0 auto;
+      @media screen and (min-width: 980px) {
+        display:inline-block;
+      }
+    }
+
+    li img {
+      margin:0 auto;
+    }
+
+    li a {
+      display:block;
+      padding:10px;
+      text-align:center;
+      font-size:0.65rem;
+      @media screen and (min-width: 980px) {
+        font-size:0.9rem;
+        text-align:left;
+        padding:20px 25px;
+      }
+
+    }
+
+    .button {
+      margin-left:5px;
+      margin-right:5px;
+      font-size:0.65rem;
+      @media screen and (min-width: 64em) {
+        font-size:0.9rem;
+        margin-left:30px;
+        margin-right:30px;
+      }
+    }
+  }
+
+  select {
+    max-width:320px;
+  }
+
+  .edit-dash-selection label span {
+    display:block;
+    padding-left:10px;
+  }
+
+  .edit-dash-selection .inactive label span {
+    color:$grey-light;
+  }
+
+  .main {
+    label {
+      padding-bottom:5px;
+    }
+    padding:60px 10px 10px 10px;
+    background:$primary_light;
+    @media screen and (min-width: 64em) {
+      padding:30px;
+    }
+    .wrapper {
+      background:$white;
+      padding:10px;
+      @media screen and (min-width: 40em) {
+        padding:40px 60px;
+      }
+      @media screen and (min-width: 64em) {
+        padding:40px 80px 40px 80px;
+      }
+    }
+  }
+}
+
+// edit elements
+
+.sortable {
+  ul {
+    list-style: none;
+    margin:0;
+  }
+
+  li {
+    padding:5px;
+    -o-transition: none !important;
+-ms-transition: none !important;
+-moz-transition: none !important;
+-webkit-transition: none !important;
+transition: none !important;
+  }
+
+  li:hover, li:active {
+    background:url(../img/icons/move.svg) no-repeat center right $primary_light;
+    background-size:20px;
+    color:$primary;
+    cursor: pointer;
+  }
+
+  .sort-icon {
+    display: block;
+    width: 30px;
+    margin: 0 auto 10px auto;
+    color:$secondary;
+  }
+}
+
+.cell-editprofile {
+  @media screen and (min-width: 64em) {
+    padding:0 60px;
+  }
+
+}
+
+.wrap-editprofile {
+  width:180px;
+  margin:0 auto;
+  &:hover {
+    .edit-icon {
+      width:45px;
+      height:45px;
+    }
+  }
+}
+
+.editprofile {
+  @media screen and (min-width: 64em) {
+    margin-top:40px;
+  }
+}
+
+.edit-icon {
+  //display:none;
+  width: 40px;
+  height: 40px;
+  position:absolute;
+  bottom: 20px;
+  right: 0;
+
+}
+
+
+.priority {
+  width:25px;
+}
+
+/* ==========================================================================
+   dashboard screens
+   ========================================================================== */
+
+   .block-dashboard {
+     background:$primary_light;
+     padding:20px 0;
+     .wrapper {
+        max-width:1280px;
+     }
+
+     .dashboardprofile {
+       max-width:80px;
+     }
+   }
+
+   .dash-cell {
+     padding: 1.5rem 1.5rem 4.5rem 1.5rem !important;
+     position:relative;
+     min-height:320px;
+     h4 {
+       padding-bottom:40px;
+     }
+
+     table a {
+       color:$secondary;
+     }
+
+     .move {
+       position:absolute;
+       top:30px;
+       right:70px;
+       width:20px;
+       &:hover {
+         cursor:move;
+       }
+     }
+     .close {
+       position:absolute;
+       top:32px;
+       right:30px;
+       width:18px;
+       &:hover {
+         cursor:pointer;
+       }
+     }
+
+     &:hover {
+       -webkit-box-shadow: 0px 20px 28px 1px rgba(0,0,0,0.08);
+        -moz-box-shadow: 0px 20px 28px 1px rgba(0,0,0,0.08);
+        box-shadow: 0px 20px 28px 1px rgba(0,0,0,0.08);
+     }
+   }
+
+   .dash-cell--profile {
+     position:relative;
+     h4 {
+       padding:20px 0 10px 0;
+     }
+
+     a:hover {
+       color:$secondary !important;
+     }
+
+     .button {
+       position:absolute;
+       width:180px;
+       bottom:10px;
+       @media screen and (min-width: 64em) {
+        width:87% !important;
+     }
+   }
+ }
+
+   .dash-cell--numberstat {
+     padding-top:3.6rem !important;
+     h4 {
+       padding:0;
+     }
+     h1 {
+         font-size:4.2rem;
+       }
+     @media screen and (min-width: 64em) {
+     h1 {
+         font-size:5.0rem;
+       }
+
+     hr {
+       margin-bottom:120px;
+     }
+    }
+   }
+
+   .dash-cell--logs {
+
+
+    thead {
+      background:transparent;
+      border-bottom:1px solid $grey-light;
+      border-left:0;
+      border-right:0;
+      border-top:0;
+    }
+
+     th {
+       font-size: 0.7rem;
+        text-transform: uppercase;
+     }
+
+     tr, tbody {
+       border:0 !important;
+     }
+   }
+
+
+   .dash-cell.empty {
+     background:url(../img/empty-cell-plus.png) center center transparent no-repeat;
+     background-size: 80px;
+     border:2px dashed $grey-light;
+
+     -webkit-box-shadow: 0px 20px 28px 1px rgba(0,0,0,0.0);
+      -moz-box-shadow: 0px 20px 28px 1px rgba(0,0,0,0.0);
+      box-shadow: 0px 20px 28px 1px rgba(0,0,0,0.0);
+   }
+
+   .link.bottom {
+      border-top: 1px solid #D3D6D8;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding: 1.2rem 0.9375rem;
+
+      i {
+        vertical-align: middle;
+        padding-left:10px;
+      }
+   }
+
+   .tag {
+     background:$secondary_light;
+     color:$secondary;
+     padding:10px 15px;
+     margin: 3px 0 12px 0;
+     display: inline-block;
+     -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      border-radius: 18px;
+      white-space: nowrap;
+    font-size: 0.8rem;
+   }
+
+   .tag.add {
+     position:relative;
+     padding:10px 15px 10px 35px;
+     .kikos {
+       position:absolute;
+       left:12px;
+     }
+   }
+
+   .tag {
+     &:hover {
+       color:$primary;
+       cursor:pointer;
+     }
+   }
+
+/* ==========================================================================
+   log screen in elements
+   ========================================================================== */
+
+.block-login {
+  margin-top:40px;
+  @media screen and (min-width: 64em) {
+    margin-top:80px;
+  }
+  .login {
+    max-width: 780px;
+    margin: 0 auto;
+    background:$white;
+    padding:40px;
+    @media screen and (min-width: 64em) {
+      padding:80px;
+    }
+    a {
+      color:$secondary;
+    }
+  }
+}
+
+/* ==========================================================================
+   form elements
+   ========================================================================== */
+
+//all focusable border elements
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus, select:focus {
+  border:1px solid $primary;
+}
+
+[type='text'],[type='search'] {
+  height:2.75rem;
+}
+
+textarea {
+  min-height:8rem !important;
+}
+
+
+.custom-file-upload {
+  border: 1px solid $grey-light;
+  display: inline-block;
+  background:$white;
+  padding: 0;
+  font-weight:normal;
+  cursor: pointer;
+  color: $grey-light;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-bottom:0 !important;
+  &:focus {
+    border-color:$secondary;
+  }
+}
+
+.file-name {
+  padding:0 20px 0 15px;;
+}
+
+#datepicker {
+  background:url(../img/icons/field-date.png) right center no-repeat;
+  background-size:25px;
+  &:hover {
+    cursor:hand;
+    cursor:pointer;
+  }
+
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border-radius: 0 !important;
+    border:0 !important;
+    background: $white !important;
+}
+
+.ui-datepicker-prev span {
+  background:url(../img/addmenu/left.png) no-repeat center center !important;
+  background-size:cover !important;
+}
+
+.ui-datepicker-next span {
+  background:url(../img/addmenu/right.png) no-repeat center center !important;
+  background-size:cover !important;
+}
+
+.ui-datepicker-calendar tbody tr {
+    background:$white;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+  background:$white;
+  border:#f8f8f8 1px solid;
+  color:$grey;
+}
+
+.ui-state-highlight {
+  background:$secondary_light !important;
+  border:$secondary_light !important;
+  color:$grey !important;
+}
+
+.ui-state-active {
+  background:$primary !important;
+  border:$primary !important;
+  color:$white !important;
+}
+
+//custom fields
+
+.search_input_custom {
+  background:url(../img/icons/search.png) no-repeat center right $secondary;
+  background-size:32px;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+  border-color:$secondary;
+}
+
+.search_input_custom:focus {
+  color:$primary;
+}
+
+.search_input_custom2 {
+  background:url(../img/icons/search-green.png) no-repeat center right #fff;
+  background-size:32px;
+  text-align:left;
+  color:$primary;
+  font-weight:normal;
+}
+
+.search_input_custom::-webkit-input-placeholder { /* Edge */
+color: #fff;
+}
+
+.search_input_custom:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #fff;
+}
+
+.search_input_custom2::-webkit-input-placeholder { /* Edge */
+color: #ccc;
+}
+
+.search_input_custom2:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #ccc;
+}
+
+.search_input_custom::placeholder {
+color: #fff;
+}
+
+
+//custom checbox
+
+/* The container */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  padding-top: 3px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border:1px solid #cacaca;
+  background-color: #fefefe;
+-webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+}
+
+/* On mouse-over, add a background color */
+.container-checkbox:hover input ~ .checkmark {
+  background-color: $secondary;
+    border:1px solid $secondary;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: $secondary;
+  border:1px solid $secondary;
+
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 11px;
+  top: 7px;
+  width: 8px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+// selects
+
+
+
+select {
+  height:2.75rem;
+  background:url(../img/icons/select-down.svg) no-repeat right center #fff;
+  background-size:30px;
+  color:#ccc;
+  &:focus {
+    color:$primary;
+  }
+}
+
+.dataTables_length select {
+  background:transparent;
+}
+
+select.fullwidth {
+  max-width:100%;
+}
+
+select.top1 {
+  position: absolute;
+  top: 20px;
+  width: 140px;
+  left: 150px;
+}
+
+select.top2 {
+  position: absolute;
+  top: 20px;
+  width: 140px;
+  left: 305px;
+}
+
+select.top3 {
+  position: absolute;
+  top: 20px;
+  width: 120px;
+  right: 108px;
+}
+
+.selectborder--primary {
+  border-top:4px solid $primary;
+}
+
+.selectborder--primary-bright {
+  border-top:4px solid $primary_bright;
+}
+
+.selectborder--secondary {
+  border-top:4px solid $secondary;
+}
+
+
+.closeable-select {
+    &:hover {
+      cursor:hand;
+      cursor:pointer;
+      background-image:url(../img/icons/close-over.png);
+    }
+  padding-right:30px;
+  background:url(../img/icons/close.png) center right transparent no-repeat;
+  background-size:12px;
+}
+
+//data tables and tables in general
+
+table {
+  margin-bottom:0;
+  .kikol {
+    font-size:16px;
+  }
+}
+
+.dataTables_wrapper {
+
+  thead th {
+    text-transform: uppercase;
+    &:hover {
+      cursor:hand;
+      cursor:pointer;
+    }
+  }
+
+  thead tr {
+    background:$white;
+    border-top:1px solid $white !important;
+    border-bottom:1px solid $white !important;
+    border-left:0;
+    border-right:0;
+    font-size:0.9rem;
+    height:0 !important;
+  }
+
+  .dataTables_scrollHead {
+    border-bottom:1px solid $grey-light !important;
+  }
+
+  .dataTables_filter {
+    display:none;
+  }
+
+  .dataTables_scrollBody {
+    padding-bottom:20px;
+    border-bottom:1px solid $grey-light !important;
+    margin-bottom:20px;
+  }
+
+  .dataTables_empty {
+    text-align:center;
+  }
+
+
+
+@media screen and (min-width: 42em) {
+  .sorting_desc {
+    background:url(../img/icons/down.svg) no-repeat center right;
+    background-size: 14px;
+  }
+
+  .sorting_asc {
+    background:url(../img/icons/up.svg) no-repeat center right;
+    background-size: 14px;
+  }
+
+  .sorting {
+    background:url(../img/icons/both.svg) no-repeat center right;
+    background-size: 25px;
+  }
+}
+
+  .dataTables_length label, .dataTables_info {
+    color:$grey;
+    font-size:0.9rem;
+  }
+
+  .pagination a:hover, .pagination button:hover {
+    background:transparent !important;
+  }
+
+  .previous, .previous a, .next a, .next  {
+    text-transform: uppercase;
+    color:$secondary;
+  }
+
+}
+
+.highlight-fields .dataTables_wrapper {
+  thead, tr, tbody {
+    background:transparent !important;
+    border:0 !important;
+  }
+}
+
+
+.dataTables_length select {
+  width:62px;
+  font-size: 0.9rem;
+}
+
+.dataTables_paginate {
+  text-align:right;
+  margin-top:-24px;
+}
+
+thead {
+  background:$white;
+  border-top:1px solid $grey-light;
+  border-bottom:1px solid $grey-light;
+  border-left:0;
+  border-right:0;
+  font-size:0.9rem;
+}
+
+tr, tbody {
+  border:0 !important;
+}
+
+tbody td {
+  font-size: 0.9rem;
+}
+
+tfoot {
+  display:none;
+}

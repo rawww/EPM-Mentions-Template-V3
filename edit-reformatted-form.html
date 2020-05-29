@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="no-js height100" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Mobile Meta -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>EPM Mentions</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="http://use.typekit.net/obs4tew.css">
+  <link rel="stylesheet" href="font/css/kiko-all.min.css">
+  <!--owl carousel https://owlcarousel2.github.io -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <!--graph.js https://www.chartjs.org/ -->
+  <script src="js/vendor/Chart.bundle.min.js"></script>
+  <!--jquery ui -->
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+
+  <link rel="stylesheet" id="cat-a-styles" href="https://www.epmorris.co.uk/mentions/cat-a-styles.css" type="text/css" />
+
+</head>
+
+<body class="height100 fullbg">
+  <!-- wrapper starts -->
+
+  <div class="grid-x">
+    <div class="large-12 cell">
+
+      <!-- desktop nav bar starts -->
+
+      <div class="grid-x block-header show-for-large" role="banner">
+
+        <div class="cell small-5 large-4 branding">
+          <img alt="epm Mentions" src="img/logo.svg" />
+        </div>
+
+        <div class="cell small-7 large-8 navigation show-for-large">
+
+          <!--desktop hamburger menu-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="page-nav"><i class='kikos kiko-hamburger-menu'></i></button>
+
+          <!--settings-->
+          <button class="button float-right profile" type="button"><img class="nav-settings" src="img/icons/ico-cog.png" /></button>
+
+          <!--fav-->
+          <button class="button float-right profile" type="button"><img class="nav-favourite" src="img/icons/ico-star.png" /></button>
+
+          <!--profile-->
+          <button class="button float-right profile" type="button"><img class="nav-profile" src="img/profile-avatar.jpg" /></button>
+
+          <!--language selector-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="language">En <i class='kikos kiko-triangular-arrow-down'></i></button>
+
+          <!--add to dashboard-->
+          <button class="button float-right active-white notrounded" type="button" data-toggle="add-to-dashboard"><i class="kikos kiko-circle-plus"></i> Add to dashboard</button>
+
+
+
+        </div>
+
+      </div>
+
+      <!-- desktop nav bar ends -->
+
+
+      <!-- mobile nav bar starts -->
+
+      <div class="grid-x block-header mobile hide-for-large" role="banner">
+
+        <div class="cell small-3">
+          <a href="#" class="white" data-toggle="page-nav"><i class='kikos kiko-hamburger-menu lt click-me'></i></a>
+        </div>
+
+        <div class="cell small-6 ct">
+          <h3>New feedback log</h3>
+        </div>
+
+        <div class="cell small-3 rt">
+          <a href="#" class="white" data-toggle="add-to-dashboard"><i class='kikos kiko-circle-plus click-me'></i></a>
+        </div>
+
+      </div>
+
+      <!-- mobile nav bar ends -->
+
+      <!-- main nav dropdown starts-->
+
+      <div class="dropdown-pane dropdown-pane--nav navigation bottom notrounded page-nav" id="page-nav" data-options="data-close-on-click" data-dropdown data-auto-focus="true">
+        <div class="grid-x grid-padding-x grid-padding-y">
+          <div class="cell cell-nav small-4 ct click-me">
+            <!--fav-->
+            <button class="button" type="button"><img class="nav-favourite" src="img/icons/ico-star.png" /></button>
+          </div>
+          <div class="cell cell-nav small-4 ct click-me">
+            <!--settings-->
+            <button class="button" type="button"><img class="nav-settings" src="img/icons/ico-cog.png" /></button>
+         </div>
+          <div class="cell cell-nav small-4 ct click-me">
+            <!--profile-->
+            <button class="button" type="button"><img class="nav-profile" src="img/profile-avatar.jpg" /></button>
+          </div>
+        </div>
+        <div class="grid-x  grid-padding-x grid-padding-y">
+          <div class="cell cell-nav-items small-12">
+            <i data-toggle="page-nav" class='kikor kiko-cross-line click-me pa close'></i>
+            <ul>
+              <li><a href="#">Incidents</a></li>
+              <li><a href="#">Vehicle Incident Basic Entry</a></li>
+              <li><a href="#">Mentions</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+      <!-- main nav dropdown ends-->
+
+      <!-- add to dashboard drop down menu content starts -->
+      <div class="dropdown-pane dropdown-pane--addtodash bottom notrounded" data-options="data-close-on-click" data-position="bottom" data-alignment="left" id="add-to-dashboard" data-dropdown data-auto-focus="true">
+        <h4 class="pb">Add to dashboard</h4><i data-toggle="add-to-dashboard" class='kikor kiko-cross-line click-me pa close'></i>
+
+        <!-- owl slides -->
+        <div class="owl-carousel">
+          <div class="item click-me" style="width:420px;">
+            <div class="overlay"></div><img src="img/addmenu/overview-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-inactive.png" />
+            <p class="inactive">Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/priority-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/total-feedback-logs-active.png" />
+            <p>Label</p>
+          </div>
+          <div class="item click-me" style="width:210px;">
+            <div class="overlay"></div><img src="img/addmenu/total-feedback-logs-inactive.png" />
+            <p class="inactive">Label</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- add to dashboard drop down menu content ends -->
+
+      <!-- language drop down menu starts -->
+      <div class="dropdown-pane bottom notrounded" data-options="data-close-on-click" data-position="bottom" data-alignment="left" id="language" data-dropdown data-auto-focus="true">
+        <h4>Languages</h4><i data-toggle="language" class='kikor kiko-cross-line click-me pa close'></i>
+        <div class="grid-x">
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+          <div class="cell small-12 medium-6 large-3">
+            <ul>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+              <li><a href="#">Nav Item</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- language drop down menu ends -->
+
+      <!-- edit screen starts -->
+
+      <div class="grid-x block-edit contentwrapper">
+
+        <a href="#" class="close-tab open close-sidebar hide-for-large"><i class="kikol kiko-triangular-arrow-right secondary"></i></a>
+
+        <!-- sidebar -->
+        <div class="cell small-2 sidebar">
+
+          <a href="#" class="close-tab close close-sidebar hide-for-large"><i class="kikol kiko-triangular-arrow-left secondary"></i></a>
+
+          <ul>
+            <li class="cancel clearwrap"><a href="#"><i class='kikol kiko-triangular-arrow-left secondary'></i> Cancel</a><span class="clear secondary click-me">Clear all</span></li>
+
+            <li><a href="#one"><span><img src="img/icons/ticked.svg"></span> 1. Outline <span class="tooltip-trigger" data-tooltip tabindex="1" title="Tooltip text here"><span class="tooltip-bubble">?</span></a></li>
+            <li><a href="#two"><span><img src="img/icons/ticked-inactive.svg"></span> 2. Details</a></li>
+            <li><a href="#three"><span><img src="img/icons/ticked-inactive.svg"></span> 3. Evidence</a></li>
+            <li><a href="#six"><span><img src="img/icons/ticked-inactive.svg"></span> 6. Documents</a></li>
+
+          </ul>
+
+        </div>
+        <!-- main -->
+        <div class="cell small-10 main">
+          <h4 class="mb">New feedback log</h4>
+          <div class="wrapper box-shadow pr">
+            <div class="grid-x grid-padding-x dont-highlight-fields">
+              <div class="cell small-12 ">
+                <a id="one"></a>
+                <h3 class="primary">1. Outline</h3>
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+                <label>Tags</label>
+                <span class="add tag click-me"><i class='kikos kiko-circle-plus'></i> new tag</span> <span class="tag">test tag</span> <span class="tag">test tag</span>
+              </div>
+
+              <div class="cell small-12 large-6 ">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+              <div class="cell small-12">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+              <div class="cell small-12 large-6">
+              <label>Date Picker</label>
+              <script>
+                jQuery( function() {
+                  jQuery( "#datepicker" ).datepicker();
+                } );
+              </script>
+              <input type="text" id="datepicker">
+            </div>
+
+            <div class="cell small-12 large-6">
+              <label>Date Picker</label>
+              <script>
+                jQuery( function() {
+                  jQuery( "#datepicker" ).datepicker();
+                } );
+              </script>
+              <input type="text" id="datepicker">
+            </div>
+
+            <div class="cell small-12 large-6">
+              <label>Text</label>
+              <input type="text" placeholder="Placeholder" />
+            </div>
+
+            <div class="cell small-12">
+              <a href="#" class="button bgtranssecondary">Secondary Button</a>
+            </div>
+          </div>
+          <div class="grid-x grid-padding-x highlight-fields">
+            <div class="cell small-12 large-6">
+              <label>Select</label>
+              <select class="fullwidth">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+
+            <div class="cell small-12 large-6">
+              <label>Select</label>
+              <select class="fullwidth">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+
+              <div class="cell small-12 large-6">
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+              </div>
+
+            </div>
+
+            <hr>
+
+            <div class="grid-x grid-padding-x dont-highlight-fields">
+
+              <div class="cell small-12">
+                <a id="two"></a>
+                <h3 class="primary">2. Details</h3>
+              </div>
+
+              <div class="cell small-12 large-6">
+                <input class="search_input_custom" type="text" placeholder="Transactional Search" />
+              </div>
+
+              <div class="cell small-12 large-6">
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Date</label>
+                <script>
+                  jQuery( function() {
+                    jQuery( "#datepicker" ).datepicker();
+                  } );
+                </script>
+                <input type="text" id="datepicker">
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+              <div class="cell small-12">
+                <label>Textarea</label>
+                <textarea></textarea>
+              </div>
+
+              <div class="cell small-12">
+                <label class="container-checkbox">Custom checkbox
+                  <input type="checkbox">
+                  <span class="checkmark rounded"></span>
+                </label>
+              </div>
+
+            </div>
+
+            <div class="grid-x grid-padding-x highlight-fields">
+              <div class="cell small-12 mb30">
+                <h3 class="primary">Select GPS Point</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1722.4929493483864!2d-1.2528335655773133!3d52.37091157472723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x41492870bb06b2a4!2sThe%20Famous%20Mr%20Chips!5e0!3m2!1sen!2suk!4v1589989467736!5m2!1sen!2suk" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+              <div class="cell small-12 large-6">
+                <input class="search_input_custom2" type="text" placeholder="Transactional Search" />
+              </div>
+
+              <div class="cell small-12 large-6">
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Text</label>
+                <input type="text" placeholder="Placeholder" />
+              </div>
+
+              <div class="cell small-12 large-6">
+              </div>
+
+
+              <div class="cell small-12 large-6">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+
+              <div class="cell small-12 large-6">
+                <a href="#" class="button bgtranssecondary fullwidth">Button bgtranssecondary</a>
+              </div>
+
+              <div class="cell small-12 large-6">
+                <a href="#" class="button bgtranssecondary fullwidth">Button bgtranssecondary</a>
+              </div>
+
+              <div class="cell small-12">
+                <label class="container-checkbox">Custom checkbox
+                  <input type="checkbox">
+                  <span class="checkmark rounded"></span>
+                </label>
+              </div>
+
+              <div class="cell small-12 large-6">
+                <label>Select</label>
+                <select class="fullwidth">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+                <a href="#" class="button bgsecondary fullwidth">Button</a><br />
+              </div>
+
+            </div>
+
+<hr/>
+
+<div class="grid-x grid-padding-x dont-highlight-fields">
+
+  <div class="cell small-12">
+    <a id="three"></a>
+    <h3 class="primary">3. Evidence</h3>
+  </div>
+
+  <div class="cell small-12">
+    <label class="container-checkbox">Custom checkbox
+      <input type="checkbox">
+      <span class="checkmark rounded"></span>
+    </label>
+  </div>
+
+  <div class="cell small-12 large-6">
+    <label>Select</label>
+    <select class="fullwidth">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+  </div>
+
+  <div class="cell small-12 large-6">
+    <label>Select</label>
+    <select class="fullwidth">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+  </div>
+
+  <div class="cell small-12">
+    <a href="#" class="button bgsecondary fullwidth">Button</a><br />
+  </div>
+
+</div>
+
+<div class="grid-x grid-padding-x highlight-fields">
+
+  <div class="cell small-12">
+    <h4 class="primary">Request History</h4>
+  </div>
+
+  <div class="cell small-12">
+    <div class="grid-x grid-padding-y">
+      <div class="small-12 large-6 mb30"><input class="search_input_custom2" id="search-table" type="text" placeholder="Search"></div>
+      <div class="small-12 large-6"></div>
+      <div class="small-12">
+        <table id="sortabletable" class="display unstriped" style="width:100%">
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td>61</td>
+            </tr>
+            <tr>
+              <td>Garrett Winters</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>63</td>
+
+            </tr>
+            <tr>
+              <td>Ashton Cox</td>
+              <td>Junior Technical Author</td>
+              <td>San Francisco</td>
+              <td>66</td>
+
+            </tr>
+            <tr>
+              <td>Cedric Kelly</td>
+              <td>Senior Javascript Developer</td>
+              <td>Edinburgh</td>
+              <td>22</td>
+
+            </tr>
+            <tr>
+              <td>Airi Satou</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>33</td>
+
+            </tr>
+            <tr>
+              <td>Brielle Williamson</td>
+              <td>Integration Specialist</td>
+              <td>New York</td>
+              <td>61</td>
+
+            </tr>
+            <tr>
+              <td>Herrod Chandler</td>
+              <td>Sales Assistant</td>
+              <td>San Francisco</td>
+              <td>59</td>
+
+            </tr>
+            <tr>
+              <td>Rhona Davidson</td>
+              <td>Integration Specialist</td>
+              <td>Tokyo</td>
+              <td>55</td>
+
+            </tr>
+            <tr>
+              <td>Colleen Hurst</td>
+              <td>Javascript Developer</td>
+              <td>San Francisco</td>
+              <td>39</td>
+
+            </tr>
+            <tr>
+              <td>Sonya Frost</td>
+              <td>Software Engineer</td>
+              <td>Edinburgh</td>
+              <td>23</td>
+
+            </tr>
+            <tr>
+              <td>Jena Gaines</td>
+              <td>Office Manager</td>
+              <td>London</td>
+              <td>30</td>
+
+            </tr>
+            <tr>
+              <td>Quinn Flynn</td>
+              <td>Support Lead</td>
+              <td>Edinburgh</td>
+              <td>22</td>
+
+            </tr>
+            <tr>
+              <td>Charde Marshall</td>
+              <td>Regional Director</td>
+              <td>San Francisco</td>
+              <td>36</td>
+
+            </tr>
+            <tr>
+              <td>Haley Kennedy</td>
+              <td>Senior Marketing Designer</td>
+              <td>London</td>
+              <td>43</td>
+
+            </tr>
+            <tr>
+              <td>Tatyana Fitzpatrick</td>
+              <td>Regional Director</td>
+              <td>London</td>
+              <td>19</td>
+
+            </tr>
+            <tr>
+              <td>Michael Silva</td>
+              <td>Marketing Designer</td>
+              <td>London</td>
+              <td>66</td>
+
+            </tr>
+            <tr>
+              <td>Paul Byrd</td>
+              <td>Chief Financial Officer (CFO)</td>
+              <td>New York</td>
+              <td>64</td>
+
+            </tr>
+            <tr>
+              <td>Gloria Little</td>
+              <td>Systems Administrator</td>
+              <td>New York</td>
+              <td>59</td>
+
+            </tr>
+            <tr>
+              <td>Bradley Greer</td>
+              <td>Software Engineer</td>
+              <td>London</td>
+              <td>41</td>
+
+            </tr>
+            <tr>
+              <td>Dai Rios</td>
+              <td>Personnel Lead</td>
+              <td>Edinburgh</td>
+              <td>35</td>
+
+            </tr>
+            <tr>
+              <td>Jenette Caldwell</td>
+              <td>Development Lead</td>
+              <td>New York</td>
+              <td>30</td>
+
+            </tr>
+            <tr>
+              <td>Yuri Berry</td>
+              <td>Chief Marketing Officer (CMO)</td>
+              <td>New York</td>
+              <td>40</td>
+
+            </tr>
+            <tr>
+              <td>Caesar Vance</td>
+              <td>Pre-Sales Support</td>
+              <td>New York</td>
+              <td>21</td>
+
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<hr/>
+
+<div class="grid-x grid-padding-x dont-highlight-fields">
+
+  <div class="cell small-12">
+    <a id="six"></a>
+    <h3 class="primary">6. Documents</h3>
+  </div>
+
+</div>
+
+<div class="grid-x grid-padding-x highlight-fields">
+
+  <div class="cell small-12">
+    <label for="file-upload" class="custom-file-upload show-for-large full-width">
+      <a class="button notrounded bgsecondary m0">Browse...</a> <span class="file-name">Upload documents</span>
+    </label>
+    <input class="system-file-upload hide-for-large" id="file-upload" name='upload_cont_img' type="file">
+  </div>
+
+</div>
+
+<div class="grid-x grid-padding-x dont-highlight-fields">
+  <div class="cell small-12">
+    <label>Textarea</label>
+    <textarea placeholder="Please enter some notes"></textarea>
+  </div>
+
+  <div class="cell small-12 large-9">
+  </div>
+
+  <div class="cell small-12 large-3">
+    <a href="#" class="button bgsecondary full-width">Button</a><br />
+  </div>
+</div>
+
+
+            <!-- /main -->
+
+          </div>
+
+          <!-- edit screen ends -->
+
+
+
+        </div>
+      </div>
+
+      <!-- wrapper ends -->
+
+
+
+      <script src="js/vendor/what-input.js"></script>
+      <script src="js/vendor/foundation.js"></script>
+      <script src="js/vendor/headroom.min.js"></script>
+      <!--owl carousel -->
+      <script src="js/vendor/owl.carousel.min.js"></script>
+      <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      <script src="http://cdn.datatables.net/1.10.19/js/dataTables.foundation.min.js"></script>
+      <script src="js/app.js"></script>
+</body>
+
+</html>
