@@ -249,7 +249,7 @@
         <!-- main -->
         <div class="cell small-10 main">
           <h4 class="mb">Screen Header</h4>
-          <div class="wrapper box-shadow">
+          <div class="wrapper box-shadow pr">
             <div class="grid-x">
               <div class="cell small-order-2 large-order-1 small-12 large-8">
                 <h3 class="secondary">Header</h3>
@@ -263,7 +263,11 @@
                 </select>
                 <label>Text area</label>
                 <textarea></textarea>
-                <label>Checkbox <input type="checkbox" /></label>
+                <label class="container-checkbox">Custom checkbox
+                  <input type="checkbox">
+                  <span class="checkmark rounded"></span>
+                </label>
+                <label>Standard checkbox <input type="checkbox" /></label>
                 <a href="#" class="button bgprimary">Button bgprimary</a><br />
                 <a href="#" class="button bgsecondary">Button bgsecondary</a><br />
                 <a href="#" class="button bgtransprimary">Button bgtransprimary</a><br />
